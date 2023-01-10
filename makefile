@@ -13,7 +13,7 @@ OUTDIR := build
 FLAGS := -mmcu=$(MMCU) -DF_CPU=$(DF_CPU) -O2 -lm
 OCFLAGS := -O ihex
 
-OBJS := $(patsubst $(SRCDIR)/%.c,$(OUTDIR)/%.o,$(wildcard $(SRCDIR)/*.c)) $(OUTDIR)/liblcd.a
+OBJS := $(patsubst $(SRCDIR)/%.c,$(OUTDIR)/%.o,$(wildcard $(SRCDIR)/*.c)) lcdlib/liblcd.a
 OUT := $(OUTDIR)/$(PROJECTNAME)
 
 all: $(OUT).hex
